@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Crear lista de números</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container my-3 border border-dark">
+        <form name="formulario">
+            <label class="form-label">Numero :</label>
+            <input type="number" class="form-control" id="idNumero" />
+            <div class="text-center my-2">
+                <input type="button" id="idCrearLista" class="btn btn-primary me-3" value="Crear lista" />
+                <input type="button" id="idBorrarLista" class="btn btn-primary" value="Borrar lista" />
+            </div>
+        </form>
+    </div>
+    <div class="container my-3 border border-primary">
+        <ul  id="idLista"></ul>
+    </div>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/file.js"></script>
+</body>
+</html>
