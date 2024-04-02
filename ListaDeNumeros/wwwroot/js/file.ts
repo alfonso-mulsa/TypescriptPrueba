@@ -13,8 +13,7 @@ function crearLinea(texto: string) {
     return nuevaLinea;
 }
 function borrarLista() {
-    let lista = document.getElementById("idLista");
-    let numLineas = lista.childElementCount;
+    let numLineas = document.getElementById("idLista").childElementCount;
     for (let contador = 1; contador <= numLineas; contador++) {
         borrarLinea("idLista");
     }
