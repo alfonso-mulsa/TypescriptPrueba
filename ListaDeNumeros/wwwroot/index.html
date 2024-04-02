@@ -8,17 +8,23 @@
 </head>
 <body>
     <div class="container my-3 border border-dark">
-        <form name="formulario">
-            <label class="form-label">Numero :</label>
-            <input type="number" class="form-control" id="idNumero" />
-            <div class="text-center my-2">
-                <input type="button" id="idCrearLista" class="btn btn-primary me-3" value="Crear lista" />
-                <input type="button" id="idBorrarLista" class="btn btn-primary" value="Borrar lista" />
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form name="formulario">
+                    <label for="idNumero" class="form-label">Numero :</label>
+                    <input type="number" class="form-control" id="idNumero" />
+                    <div class="text-center my-2">
+                        <input type="button" id="idCrearLista" class="btn btn-primary me-1" value="Crear lista" />
+                        <input type="button" id="idBorrarUltimoLi" class="btn btn-primary me-1" value="Borrar última línea" />
+                        <input type="button" id="idBorrarLista" class="btn btn-primary" value="Borrar lista" />
+                    </div>
+                </form>
+
             </div>
-        </form>
+        </div>
     </div>
-    <div class="container my-3 border border-primary">
-        <ul  id="idLista"></ul>
+    <div class="container my-3 border border-primary" id="idResultado">
+        <ul id="idLista"></ul>
     </div>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="lib/jquery/dist/jquery.min.js"></script>
