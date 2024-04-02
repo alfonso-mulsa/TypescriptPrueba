@@ -10,12 +10,11 @@ function multiplicar(num1: number, num2: number) {
 function tomaVal(nombreOperando: string) {
     return Number((<HTMLInputElement>document.getElementById(nombreOperando)).value);
 }
-function mostrarResultado(evt) {
-    let tipoOperacion = evt.target.id;
+function mostrarResultado() {
     let resultado = "";
     let numero1 = tomaVal("idNumero1");
     let numero2 = tomaVal("idNumero2");
-    switch (tipoOperacion) {
+    switch (this.id) {
         case "idBotonSumar":
             resultado = String(numero1)+ " + " + String(numero2) + " = " + String(sumar(numero1, numero2));
             break;
@@ -31,9 +30,16 @@ function mostrarResultado(evt) {
     let cuadroSalida = document.getElementById("idSalida");
     cuadroSalida.appendChild(parrafo);
 }
+function crearEvento(idElemento: string, nombreEvento: string, nombreFuncion) {
+    document.getElementById(idElemento).addEventListener(nombreEvento, nombreFuncion);
+}
 
-document.getElementById("idBotonSumar").addEventListener("click", mostrarResultado);
-document.getElementById("idBotonRestar").addEventListener("click", mostrarResultado);
-document.getElementById("idBotonMultiplicar").addEventListener("click", mostrarResultado);
+crearEvento("idBotonSumar", "click", mostrarResultado);
+crearEvento("idBotonRestar", "click", mostrarResultado);
+crearEvento("idBotonMultiplicar", "click", mostrarResultado);
+
+//document.getElementById("idBotonSumar").addEventListener("click", mostrarResultado);
+//document.getElementById("idBotonRestar").addEventListener("click", mostrarResultado);
+//document.getElementById("idBotonMultiplicar").addEventListener("click", mostrarResultado);
 
 
