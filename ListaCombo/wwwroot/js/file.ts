@@ -1,8 +1,8 @@
 ﻿function ponVal(elemento: string, texto: string) {
     (<HTMLInputElement>document.getElementById(elemento)).value = texto;
 }
-function tomaVal(nombreOperando: string) {
-    return (<HTMLInputElement>document.getElementById(nombreOperando)).value;
+function tomaVal(elemento: string) {
+    return (<HTMLInputElement>document.getElementById(elemento)).value;
 }
 function selecCiudad() {
     let ciudad = this.textContent;

@@ -1,8 +1,8 @@
 function ponVal(elemento, texto) {
     document.getElementById(elemento).value = texto;
 }
-function tomaVal(nombreOperando) {
-    return document.getElementById(nombreOperando).value;
+function tomaVal(elemento) {
+    return document.getElementById(elemento).value;
 }
 function selecCiudad() {
     var ciudad = this.textContent;
